@@ -4,7 +4,7 @@
 #
 Name     : munch
 Version  : 2.3.2
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/68/f4/260ec98ea840757a0da09e0ed8135333d59b8dfebe9752a365b04857660a/munch-2.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/68/f4/260ec98ea840757a0da09e0ed8135333d59b8dfebe9752a365b04857660a/munch-2.3.2.tar.gz
 Summary  : A dot-accessible dictionary (a la JavaScript objects).
