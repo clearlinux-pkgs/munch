@@ -4,7 +4,7 @@
 #
 Name     : munch
 Version  : 2.5.0
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/43/a1/ec48010724eedfe2add68eb7592a0d238590e14e08b95a4ffb3c7b2f0808/munch-2.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/43/a1/ec48010724eedfe2add68eb7592a0d238590e14e08b95a4ffb3c7b2f0808/munch-2.5.0.tar.gz
 Summary  : A dot-accessible dictionary (a la JavaScript objects)
@@ -59,14 +59,14 @@ python3 components for the munch package.
 
 %prep
 %setup -q -n munch-2.5.0
+cd %{_builddir}/munch-2.5.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572441360
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1576011905
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -79,7 +79,7 @@ python3 setup.py build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test
+PYTHONPATH=%{buildroot}$(python -c "import sys; print(sys.path[-1])") python setup.py test
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
