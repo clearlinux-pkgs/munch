@@ -4,7 +4,7 @@
 #
 Name     : munch
 Version  : 2.5.0
-Release  : 12
+Release  : 13
 URL      : https://files.pythonhosted.org/packages/43/a1/ec48010724eedfe2add68eb7592a0d238590e14e08b95a4ffb3c7b2f0808/munch-2.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/43/a1/ec48010724eedfe2add68eb7592a0d238590e14e08b95a4ffb3c7b2f0808/munch-2.5.0.tar.gz
 Summary  : A dot-accessible dictionary (a la JavaScript objects)
@@ -52,6 +52,7 @@ python components for the munch package.
 Summary: python3 components for the munch package.
 Group: Default
 Requires: python3-core
+Provides: pypi(munch)
 
 %description python3
 python3 components for the munch package.
@@ -66,7 +67,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576011905
+export SOURCE_DATE_EPOCH=1583175144
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
